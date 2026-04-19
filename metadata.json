@@ -1,0 +1,6 @@
+{
+  "name": "Harmonia Quest (Web3 Turn-Based Card Game)",
+  "description": "A Dragon Quest-style Turn-Based Card RPG integrating MetaMask for an NFT Weapon system on Localhost (Chain ID 31337).",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}

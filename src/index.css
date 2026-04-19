@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Segoe UI", Tahoma, "Noto Sans Thai", sans-serif;
+  --color-primary-glow: #00d2ff;
+  --color-accent-red: #ff4d4d;
+  --color-ui-bg: rgba(10, 15, 30, 0.85);
+  --color-border-glow: rgba(0, 210, 255, 0.5);
+}
+
+:root {
+  --primary-glow: #00d2ff;
+  --accent-red: #ff4d4d;
+  --ui-bg: rgba(10, 15, 30, 0.85);
+  --border-glow: 0 0 15px rgba(0, 210, 255, 0.5);
+}
+
+body {
+  font-family: var(--font-sans);
+  margin: 0;
+  padding: 0;
+  background-color: #050505;
+  color: white;
+  overflow: hidden;
+}
+
+.vignette {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center 55%, transparent 35%, rgba(0,0,0,0.85) 100%);
+  pointer-events: none;
+  z-index: 5;
+}
+
+.glass-panel {
+  background: var(--ui-bg);
+  border: 1px solid var(--primary-glow);
+  box-shadow: var(--border-glow);
+  border-radius: 8px;
+}
+
+.story-panel {
+  background: var(--ui-bg);
+  border: 2px solid rgba(255,255,255,0.2);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  border-radius: 10px;
+}
+
+.btn-action {
+  background: rgba(0,0,0,0.7);
+  border: 1px solid var(--primary-glow);
+  color: white;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+.btn-action:hover {
+  background: var(--primary-glow);
+  color: #000;
+}
+.btn-action:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.hp-bar-fill { background: linear-gradient(to right, #ff4d4d, #8b0000); }
+.mp-bar-fill { background: linear-gradient(to right, #00d2ff, #0056b3); }
+
+.card-item {
+  background: #222;
+  border: 2px solid rgba(255,255,255,0.3);
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+}
+.card-item:hover {
+  transform: translateY(-20px);
+  box-shadow: 0 0 20px var(--primary-glow);
+  border-color: var(--primary-glow);
+}
